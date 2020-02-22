@@ -16,19 +16,22 @@
         app:layout_constraintTop_toTopOf="@+id/guideline">
 
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/userNewsFeedTab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Monday" />
+            android:text="Newsfeed" />
 
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/userMarketTab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tuesday" />
+            android:text="Marketplace" />
 
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/userProfileTab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Wednesday" />
+            android:text="Profile" />
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.constraintlayout.widget.Guideline

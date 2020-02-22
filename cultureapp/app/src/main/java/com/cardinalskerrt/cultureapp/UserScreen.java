@@ -2,7 +2,9 @@ package com.cardinalskerrt.cultureapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
@@ -14,29 +16,44 @@ public class UserScreen extends AppCompatActivity {
 
     TableLayout userTabLayout;
     ViewPager userViewPager;
-
-
+    PageAdapter userPageAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_screen);
+
+        userTabLayout = findViewById(R.id.userTabLayout);
+        userViewPager = findViewById(R.id.userViewPager);
+
+        userPageAdapter = new PageAdapter(getSupportFragmentManager(), 3);
+        userViewPager.setAdapter(userPageAdapter);
     }
 
-    private static class PageAdapter extends PagerAdapter{
+    //page adapter for this activity
+    private static class PageAdapter extends FragmentPagerAdapter {
+        int numOfTabs;
 
-        PageAdapter(FragmentManager fn, int numOfTabs){
+        public PageAdapter(FragmentManager fn, int numOfTabs){
             super(fn);
+            this.numOfTabs = numOfTabs;
+        }
+
+        @NonNull
+        @Override
+        public Fragment getItem(int position) {
+            //TODO return the fragments
+            return null;
         }
 
         @Override
         public int getCount() {
-            return 0;
+            return numOfTabs;
         }
 
         @Override
-        public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
-            return false;
+        public int getItemPosition(@NonNull Object object) {
+            return super.getItemPosition(object);
         }
     }
 
