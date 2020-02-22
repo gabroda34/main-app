@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     }
     }
 
-}
+
 class AuthenticationPagerAdapter extends FragmentPagerAdapter {
     private ArrayList<Fragment> fragmentList = new ArrayList<>();
 
