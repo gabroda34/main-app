@@ -8,7 +8,6 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
-
     ImageView startLogo;
 
     @Override
@@ -20,6 +19,5 @@ public class MainActivity extends AppCompatActivity {
 
         Animation fadeIn = AnimationUtils.loadAnimation(this, R.anim.fadein);
         startLogo.startAnimation(fadeIn);
-
     }
 }
