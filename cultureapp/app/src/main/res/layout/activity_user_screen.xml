@@ -6,34 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".UserScreen">
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/userTabLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline">
-
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/userNewsFeedTab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Newsfeed" />
-
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/userMarketTab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Marketplace" />
-
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/userProfileTab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Profile" />
-    </com.google.android.material.tabs.TabLayout>
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
@@ -49,4 +21,33 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/userTabLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/userNewsfeedTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Newsfeed" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/userMarketTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Market" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/userProfileTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile" />
+    </com.google.android.material.tabs.TabLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
